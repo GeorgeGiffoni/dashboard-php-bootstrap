@@ -191,3 +191,34 @@ body{
 .confirm-btns button:hover{
     background-color: #2b74bfff;
 }
+
+.table{
+    border: none;
+    border-radius: 8px;
+    box-shadow:0px 4px 12px rgba(164, 164, 164, 0.3);
+}
+
+.table-col-title{
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: #78797d;
+}
+
+.table tbody{
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #78797d;
+}
+
+.table thead{
+    background-color: #f7f6fb;
+}
+
+.table-title {
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+
+.table-title input {
+    width: 30%;
+}

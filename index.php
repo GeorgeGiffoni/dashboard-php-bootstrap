@@ -49,14 +49,38 @@
             </nav>
             <div id="content" class="container">
                 <!-- TABELA -->
+                <div class="table-title">
+                    <h3>Usuários</h3>
+                    <input type="text" class="form-control form-field son-form-field" placeholder="Pesquisar">
+                </div>
                 <table class="table bg-white">
                     <thead>
                         <tr>
-                            <th></th>
+                            <th class="table-col-title">#</th>
+                            <th class="table-col-title">NOME</th>
+                            <th class="table-col-title">SOBRENOME</th>
+                            <th class="table-col-title">USUÁRIO</th>
                         </tr>
-
                     </thead>
                     <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>George</td>
+                            <td>Giffoni</td>
+                            <td>Diasbo</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Samele</td>
+                            <td>Parente</td>
+                            <td>Samelinda</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Suelen</td>
+                            <td>Giffoni</td>
+                            <td>misskekao</td>
+                        </tr>
 
                     </tbody>
                 </table>
@@ -107,5 +131,6 @@
             $("#wrapper").toggleClass("toggled");
         });
     </script>
+    <script src="js/chart/Chart.min.js"></script>
 </body>
 </html>
