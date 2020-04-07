@@ -29,16 +29,16 @@
         </div>
         <!-- CONTEÚDO -->
         <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light" id="son-navbar">
+            <nav class="navbar navbar-expand-lg navbar-light" id="app-navbar">
                 <span id="menu-toggle" class="mr-auto"><img src="assets/meu-logo.png" class="mx-auto d-block"></span>
                 <a  class="navbar-brand" href="#" id="navbar-site-title">Painel</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#son-navbar-collapse"
-                    aria-controls="son-navbar-collapse" aria-expanded="false" aria-label="Exibe toda navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-navbar-collapse"
+                    aria-controls="app-navbar-collapse" aria-expanded="false" aria-label="Exibe toda navbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>   
-                <div class="collapse navbar-collapse" id="son-navbar-collapse">
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
                         <form class="form-inline" id="navbar-search-form">
-                                <input type="text" class="form-control form-field son-form-field" placeholder="Pesquisar" id="navbar-search-field">
+                                <input type="text" class="form-control form-field app-form-field" placeholder="Pesquisar" id="navbar-search-field">
                         </form>
                     
                         <div id="navbar-profile" class="ml-auto">
@@ -51,7 +51,7 @@
                 <!-- TABELA -->
                 <div class="table-title">
                     <h3>Usuários</h3>
-                    <input type="text" class="form-control form-field son-form-field" placeholder="Pesquisar">
+                    <input type="text" class="form-control form-field app-form-field" placeholder="Pesquisar">
                 </div>
                 <table class="table bg-white">
                     <thead>
@@ -85,28 +85,28 @@
                     </tbody>
                 </table>
                 <!-- FORMULÁRIO -->
-                <h3 id="main-page-form-title" class="son-main-text-3">Cadastro</h3>
+                <h3 id="main-page-form-title" class="app-main-text-3">Cadastro</h3>
                 <div>
-                    <form class="card son-form" action="">
-                        <div class="card-body son-form-body">
+                    <form class="card app-form" action="">
+                        <div class="card-body app-form-body">
                             <div class="form-group">
                                 <label>Autor</label>
-                                <input class="form-field son-form-field form-control" type="text" id="user-field" placeholder="Autor">
+                                <input class="form-field app-form-field form-control" type="text" id="user-field" placeholder="Autor">
                                 <hr>
                             </div>
                             <div class="form-group">
                                 <label>Título</label>
-                                <input class="form-field son-form-field form-control" type="text" id="title-field" placeholder="Título">
+                                <input class="form-field app-form-field form-control" type="text" id="title-field" placeholder="Título">
                                 <hr>
                             </div>
                             <div class="form-group">
                                 <label>Conteúdo</label>
-                                <textarea id="body-field" placeholder="Um texto qualquer" class="form-field son-form-field form-control" name="" id="" cols="30" rows="2"></textarea>
+                                <textarea id="body-field" placeholder="Um texto qualquer" class="form-field app-form-field form-control" name="" id="" cols="30" rows="2"></textarea>
                                 <hr>
                             </div>
                             <div class="form-group">
                                 <label>Data</label>
-                                <input class="form-field son-form-field form-control" type="date" id="date-field">
+                                <input class="form-field app-form-field form-control" type="date" id="date-field">
                             </div>
                         </div>
                         <div class="confirm-btns card-footer">
@@ -114,8 +114,16 @@
                             <button class="btn btn-primary">Publicar post</button>
                         </div>
                     </form>
-                    <h3>Sem conteúdo</h3>
                 </div>
+
+                <h3 id="vendas-h3">Vendas</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <canvas id="relatorio"></canvas>
+
+                        </div>
+                    </div>
+
             </div>
         </div>
     </div>
@@ -132,5 +140,20 @@
         });
     </script>
     <script src="js/chart/Chart.min.js"></script>
+    <script>
+        var contexto = document.getElementById("relatorio").getContext('2d');
+        var grafico = new Chart(contexto, {
+            type: 'line',
+            data: {
+                labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+                datasets: [{
+                    label: 'Vendas no ano',
+                    backgroundColor: "#5898d9ff",
+                    borderColor: "#5898d9ff",
+                    data: [10, 5, 7, 18, 14, 20, 22]
+                }]
+            }
+        });
+    </script>
 </body>
 </html>
